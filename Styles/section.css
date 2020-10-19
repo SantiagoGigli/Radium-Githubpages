@@ -11,17 +11,17 @@
 }
 .mainBlock {
     flex: 50%;
-    padding:20px;
+    padding: 20px;
 }
 .sideBlock {
     flex: 50%;
-    padding:20px;
+    padding: 20px;
 }
 .block {
     padding: 20px;
-    margin:20px;
+    margin: 20px;
     border: 2px solid #d3d3d3;
-    background-color:#faf9f9;
+    background-color:  #faf9f9;
 }
 .block img {
     padding: 10px 0px 10px 0px;
@@ -43,9 +43,9 @@ figcaption {
 }
 @media screen and (max-width: 1024px) {
     .mainBlock {
-        flex:65%
+        flex: 65%
     }
     .sideBlock {
-        flex:35%;
+        flex: 35%;
     }
 }

@@ -3,8 +3,8 @@
     box-sizing: border-box;
 }
 body {
-    font-family:Arial, Helvetica, sans-serif;
-    background-color:#e9ecef;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e9ecef;
     line-height: 1.6;
 }
 ul {
@@ -63,7 +63,7 @@ h2 {
     font-weight: bold;
 }
 .burgerBox {
-    display:none;
+    display: none;
     background-color: white;
     padding: 7px;
     border: 7px solid  #480355;
