@@ -1,74 +1,92 @@
 /*Global*/
+
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #e9ecef;
     line-height: 1.6;
 }
+
 ul {
     margin: 0;
     padding: 0;
     border: 0;
 }
+
 li {
     list-style-type: none;
 }
+
 a {
     text-decoration: none;
 }
+
 h2 {
     display: inline-block;
     font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
     font-size: 25px;
     font-weight: bold;
 }
+
 /*Header*/
+
 .headerBox {
     display: flex;
     background-color: black;
     flex-direction: column;
     align-items: center;
 }
+
 .Logo {
     padding: 10px 0px 10px 0px;
 }
+
 .Logo img {
     height: 120px;
     width: 200px;
 }
+
 /*NavBar*/
+
 .blockNavbar {
     display: flex;
     justify-content: center;
     background-color: #480355;
 }
+
 .navBar {
     margin: 0;
 }
+
 .navBar li {
     display: inline-block;
     padding: 15px 40px 15px 40px;
     color: white;
 }
+
 .navBar li:hover {
     background-color: black;
-    border:  #D3D3D3 2px solid;
+    border: #D3D3D3 2px solid;
 }
+
 .navBar a {
     font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: white;
     font-weight: bold;
 }
+
 .burgerBox {
     display: none;
     background-color: white;
     padding: 7px;
-    border: 7px solid  #480355;
+    border: 7px solid #480355;
     margin: 10px 0px;
 }
+
 @media screen and (max-width: 480px) {
     .Navbar {
         display: none;
