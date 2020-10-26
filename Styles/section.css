@@ -13,9 +13,24 @@
     flex: 50%;
     padding: 20px;
 }
+
+#mainNews{
+    border: 5px solid purple;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+}
+
+#mainNews h2{
+    font-size: 45px;
+}
+
+#mainNews p{
+    font-size: 20px;
+}
+
 .sideBlock {
     flex: 50%;
     padding: 20px;
+    background-color:#615D6C;
 }
 .block {
     padding: 20px;
