@@ -17,7 +17,7 @@ window.onload = function(){
 
     function validateName(){
         var nombre = document.getElementById('name').value;
-        var nameFormat = /^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/;;
+        var nameFormat = /^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/;
         if(nombre.length > 6 && nombre.match(nameFormat))
         {
             document.getElementById('spanName').textContent = "Approved";
@@ -46,7 +46,7 @@ window.onload = function(){
             document.getElementById('spanEmail').className = 'approvedText';
         }
         else{
-            alert("Please insert a valid email format")
+            alert("Please insert a valid email format");
             document.getElementById('spanEmail').textContent = "Not Approved";
             document.getElementById('spanEmail').className = 'errorText';
         }
@@ -71,7 +71,7 @@ window.onload = function(){
             return password;
         }
         else{
-            alert("The password must have at least 8 characters mixed with numbers")
+            alert("The password must have at least 8 characters mixed with numbers");
             document.getElementById('spanPass').textContent = "Not Approved";
             document.getElementById('spanPass').className = 'errorText';
         }
@@ -90,7 +90,7 @@ window.onload = function(){
         var age = document.getElementById('age').value;
         var validAge = /^(0|[1-9]\d*)$/;
         if (age < 18 || isNaN(age)){
-            alert("The age must be higher than 18")
+            alert("The age must be higher than 18");
             document.getElementById('spanAge').textContent = "Not Approved";
             document.getElementById('spanAge').className = 'errorText';
         }
@@ -111,8 +111,8 @@ window.onload = function(){
         var phone = document.getElementById('phone').value;
         var validPhone = /^(0|[1-9]\d*)$/;
         console.log(phone);
-        if (phone < 7 || isNaN(phone)){
-            alert("Insert a valid phone number")
+        if (phone.length < 7 || isNaN(phone)){
+            alert("Insert a valid phone number");
             document.getElementById('spanPhone').textContent = "Not Approved";
             document.getElementById('spanPhone').className = 'errorText';
         }
@@ -122,31 +122,71 @@ window.onload = function(){
         }
     }
 
-    document.getElementById('age').addEventListener('focus', cleanPhone);
+    document.getElementById('phone').addEventListener('focus', cleanPhone);
     function cleanPhone(){
         document.getElementById('spanPhone').className = 'removedText';
     }
 
-    //PhoneNumber Verification*************************
-    document.getElementById('phone').addEventListener('blur', validatePhone);
-    function validatePhone(){
-        var phone = document.getElementById('phone').value;
-        var validPhone = /^(0|[1-9]\d*)$/;
-        console.log(phone);
-        if (phone < 7 || isNaN(phone)){
-            alert("Insert a valid phone number")
-            document.getElementById('spanPhone').textContent = "Not Approved";
-            document.getElementById('spanPhone').className = 'errorText';
+     //Address Verification*************************
+    document.getElementById('address').addEventListener('blur', validateAddress);
+    function validateAddress(){
+        var address = document.getElementById('address').value;
+        var validAddress = /^[a-zA-Z]+(?:\s[0-9]+)+$/;
+        console.log(address);
+        if (address.length > 5 && address.match(validAddress)){
+            document.getElementById('spanAdd').textContent = "Approved";
+            document.getElementById('spanAdd').className = 'approvedText';
         }
-        else if(phone.match(validPhone)){
-            document.getElementById('spanPhone').textContent = "Approved";
-            document.getElementById('spanPhone').className = 'approvedText';
+        else {
+            alert("Insert a valid address format");
+            document.getElementById('spanAdd').textContent = "Not Approved";
+            document.getElementById('spanAdd').className = 'errorText';
         }
     }
+    document.getElementById('address').addEventListener('focus', cleanAdd);
+    function cleanAdd(){
+        document.getElementById('spanAdd').className = 'removedText';
+    }
 
-    document.getElementById('age').addEventListener('focus', cleanPhone);
-    function cleanPhone(){
-        document.getElementById('spanPhone').className = 'removedText';
+    //City Verification*************************
+    document.getElementById('city').addEventListener('blur', validateCity);
+    function validateCity(){
+        var city = document.getElementById('city').value;
+        var validCity = /^[a-zA-Z]+$/;
+        console.log(city);
+        if (city.length > 3 && city.match(validCity)){
+            document.getElementById('spanCity').textContent = "Approved";
+            document.getElementById('spanCity').className = 'approvedText';
+        }
+        else {
+            alert("The city must have at least 3 or more characters");
+            document.getElementById('spanCity').textContent = "Not Approved";
+            document.getElementById('spanCity').className = 'errorText';
+        }
+    }
+    document.getElementById('city').addEventListener('focus', cleanCity);
+    function cleanCity(){
+        document.getElementById('spanCity').className = 'removedText';
+    }
+
+    //Postal Code Verification*************************
+    document.getElementById('postalcode').addEventListener('blur', validateCP);
+    function validateCP(){
+        var cp = document.getElementById('postalcode').value;
+        console.log(cp);
+        if (cp.length < 3 || isNaN(cp)){
+            alert("The Postal Code must have at least 3 or more numbers");
+            document.getElementById('spanCP').textContent = "Not Approved";
+            document.getElementById('spanCP').className = 'errorText';
+        }
+        else {
+            document.getElementById('spanCP').textContent = "Approved";
+            document.getElementById('spanCP').className = 'approvedText';
+        }
+    }
+    document.getElementById('postalcode').addEventListener('focus', cleanCP);
+    function cleanCP(){
+        document.getElementById('spanCP').className = 'removedText';
     }
 }
 
