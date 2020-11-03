@@ -34,7 +34,7 @@
         </div>
     </nav>
     <section class="formWrapper">
-        <h1>Hello "", thank you for subscribing to our Newsletter</h1>
+        <h1>Hello "<span id='keydown'></span>", thank you for subscribing to our Newsletter</h1>
         <div class="formContainer">
             <div class="formBox">
                 <div>
@@ -54,7 +54,7 @@
                 </div>
                 <div>
                     <label  for="repeat">Repeat Password</label>
-                    <input type="text" id="repeat" placeholder="Example: Santiago.2556">
+                    <input type="password" id="repeat" placeholder="Example: Santiago.2556">
                     <span id="spanRep" class="removedText"></span>
                 </div>
                 <div>
@@ -91,7 +91,7 @@
         </div>
     </section>
     <div class="button">
-        <input type="button" value="Subscribe">
+        <input type="button" id="inputButton" value="Subscribe">
     </div>
     <footer>
         <div class="footerContainer">
